@@ -11,6 +11,31 @@
 		F30EC0622A5D75BC0012C4AA /* ScrechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30EC0572A5D75BC0012C4AA /* ScrechKit.framework */; };
 		F30EC0672A5D75BC0012C4AA /* ScrechKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */; };
 		F30EC0682A5D75BC0012C4AA /* ScrechKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F30FDA6B2A5D8687006867F7 /* Tightening.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA662A5D8687006867F7 /* Tightening.swift */; };
+		F30FDA6C2A5D8687006867F7 /* Font Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA672A5D8687006867F7 /* Font Size.swift */; };
+		F30FDA6D2A5D8687006867F7 /* Font Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA682A5D8687006867F7 /* Font Weight.swift */; };
+		F30FDA6E2A5D8687006867F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA692A5D8687006867F7 /* Fonts.swift */; };
+		F30FDA6F2A5D8687006867F7 /* Font Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA6A2A5D8687006867F7 /* Font Design.swift */; };
+		F30FDA8E2A5D86AB006867F7 /* Camera Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA702A5D86AA006867F7 /* Camera Picker.swift */; };
+		F30FDA8F2A5D86AB006867F7 /* formatBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA712A5D86AA006867F7 /* formatBytes.swift */; };
+		F30FDA902A5D86AB006867F7 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA722A5D86AA006867F7 /* ListButton.swift */; };
+		F30FDA912A5D86AB006867F7 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA732A5D86AA006867F7 /* Shapes.swift */; };
+		F30FDA9B2A5D86AB006867F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA7E2A5D86AB006867F7 /* Color.swift */; };
+		F30FDA9C2A5D86AB006867F7 /* formatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA7F2A5D86AB006867F7 /* formatDate.swift */; };
+		F30FDA9D2A5D86AB006867F7 /* Redacted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA802A5D86AB006867F7 /* Redacted.swift */; };
+		F30FDA9E2A5D86AB006867F7 /* getMimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA812A5D86AB006867F7 /* getMimeType.swift */; };
+		F30FDA9F2A5D86AB006867F7 /* ListLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA822A5D86AB006867F7 /* ListLink.swift */; };
+		F30FDAA02A5D86AB006867F7 /* Percent Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA832A5D86AB006867F7 /* Percent Encoding.swift */; };
+		F30FDAA12A5D86AB006867F7 /* PulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA842A5D86AB006867F7 /* PulseButton.swift */; };
+		F30FDAA22A5D86AB006867F7 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA852A5D86AB006867F7 /* Scheme.swift */; };
+		F30FDAA32A5D86AB006867F7 /* ListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA862A5D86AB006867F7 /* ListParameter.swift */; };
+		F30FDAA42A5D86AB006867F7 /* Image Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA872A5D86AB006867F7 /* Image Picker.swift */; };
+		F30FDAA52A5D86AB006867F7 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA882A5D86AB006867F7 /* Sheet.swift */; };
+		F30FDAA62A5D86AB006867F7 /* asUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA892A5D86AB006867F7 /* asUIImage.swift */; };
+		F30FDAA72A5D86AB006867F7 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8A2A5D86AB006867F7 /* MenuButton.swift */; };
+		F30FDAA82A5D86AB006867F7 /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8B2A5D86AB006867F7 /* SFButton.swift */; };
+		F30FDAA92A5D86AB006867F7 /* Matched Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */; };
+		F30FDAAA2A5D86AB006867F7 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +54,31 @@
 		F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ScrechKit.docc; sourceTree = "<group>"; };
 		F30EC0612A5D75BC0012C4AA /* ScrechKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrechKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrechKitTests.swift; sourceTree = "<group>"; };
+		F30FDA662A5D8687006867F7 /* Tightening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tightening.swift; sourceTree = "<group>"; };
+		F30FDA672A5D8687006867F7 /* Font Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font Size.swift"; sourceTree = "<group>"; };
+		F30FDA682A5D8687006867F7 /* Font Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font Weight.swift"; sourceTree = "<group>"; };
+		F30FDA692A5D8687006867F7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		F30FDA6A2A5D8687006867F7 /* Font Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font Design.swift"; sourceTree = "<group>"; };
+		F30FDA702A5D86AA006867F7 /* Camera Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Camera Picker.swift"; sourceTree = "<group>"; };
+		F30FDA712A5D86AA006867F7 /* formatBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formatBytes.swift; sourceTree = "<group>"; };
+		F30FDA722A5D86AA006867F7 /* ListButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
+		F30FDA732A5D86AA006867F7 /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		F30FDA7E2A5D86AB006867F7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F30FDA7F2A5D86AB006867F7 /* formatDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formatDate.swift; sourceTree = "<group>"; };
+		F30FDA802A5D86AB006867F7 /* Redacted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redacted.swift; sourceTree = "<group>"; };
+		F30FDA812A5D86AB006867F7 /* getMimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getMimeType.swift; sourceTree = "<group>"; };
+		F30FDA822A5D86AB006867F7 /* ListLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLink.swift; sourceTree = "<group>"; };
+		F30FDA832A5D86AB006867F7 /* Percent Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Percent Encoding.swift"; sourceTree = "<group>"; };
+		F30FDA842A5D86AB006867F7 /* PulseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseButton.swift; sourceTree = "<group>"; };
+		F30FDA852A5D86AB006867F7 /* Scheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		F30FDA862A5D86AB006867F7 /* ListParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListParameter.swift; sourceTree = "<group>"; };
+		F30FDA872A5D86AB006867F7 /* Image Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image Picker.swift"; sourceTree = "<group>"; };
+		F30FDA882A5D86AB006867F7 /* Sheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		F30FDA892A5D86AB006867F7 /* asUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asUIImage.swift; sourceTree = "<group>"; };
+		F30FDA8A2A5D86AB006867F7 /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		F30FDA8B2A5D86AB006867F7 /* SFButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
+		F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Matched Effect.swift"; sourceTree = "<group>"; };
+		F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +123,27 @@
 			children = (
 				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
 				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
+				F30FDA652A5D8687006867F7 /* Font */,
+				F30FDA892A5D86AB006867F7 /* asUIImage.swift */,
+				F30FDA702A5D86AA006867F7 /* Camera Picker.swift */,
+				F30FDA7E2A5D86AB006867F7 /* Color.swift */,
+				F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */,
+				F30FDA712A5D86AA006867F7 /* formatBytes.swift */,
+				F30FDA7F2A5D86AB006867F7 /* formatDate.swift */,
+				F30FDA812A5D86AB006867F7 /* getMimeType.swift */,
+				F30FDA872A5D86AB006867F7 /* Image Picker.swift */,
+				F30FDA722A5D86AA006867F7 /* ListButton.swift */,
+				F30FDA822A5D86AB006867F7 /* ListLink.swift */,
+				F30FDA862A5D86AB006867F7 /* ListParameter.swift */,
+				F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */,
+				F30FDA8A2A5D86AB006867F7 /* MenuButton.swift */,
+				F30FDA832A5D86AB006867F7 /* Percent Encoding.swift */,
+				F30FDA842A5D86AB006867F7 /* PulseButton.swift */,
+				F30FDA802A5D86AB006867F7 /* Redacted.swift */,
+				F30FDA852A5D86AB006867F7 /* Scheme.swift */,
+				F30FDA8B2A5D86AB006867F7 /* SFButton.swift */,
+				F30FDA732A5D86AA006867F7 /* Shapes.swift */,
+				F30FDA882A5D86AB006867F7 /* Sheet.swift */,
 			);
 			path = ScrechKit;
 			sourceTree = "<group>";
@@ -83,6 +154,18 @@
 				F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */,
 			);
 			path = ScrechKitTests;
+			sourceTree = "<group>";
+		};
+		F30FDA652A5D8687006867F7 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F30FDA662A5D8687006867F7 /* Tightening.swift */,
+				F30FDA672A5D8687006867F7 /* Font Size.swift */,
+				F30FDA682A5D8687006867F7 /* Font Weight.swift */,
+				F30FDA692A5D8687006867F7 /* Fonts.swift */,
+				F30FDA6A2A5D8687006867F7 /* Font Design.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +277,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30FDA6B2A5D8687006867F7 /* Tightening.swift in Sources */,
+				F30FDA8E2A5D86AB006867F7 /* Camera Picker.swift in Sources */,
+				F30FDA6E2A5D8687006867F7 /* Fonts.swift in Sources */,
+				F30FDA902A5D86AB006867F7 /* ListButton.swift in Sources */,
+				F30FDA9D2A5D86AB006867F7 /* Redacted.swift in Sources */,
+				F30FDA9C2A5D86AB006867F7 /* formatDate.swift in Sources */,
+				F30FDAA82A5D86AB006867F7 /* SFButton.swift in Sources */,
+				F30FDAA62A5D86AB006867F7 /* asUIImage.swift in Sources */,
+				F30FDA6C2A5D8687006867F7 /* Font Size.swift in Sources */,
+				F30FDAA12A5D86AB006867F7 /* PulseButton.swift in Sources */,
+				F30FDA8F2A5D86AB006867F7 /* formatBytes.swift in Sources */,
+				F30FDAA92A5D86AB006867F7 /* Matched Effect.swift in Sources */,
 				F30EC05C2A5D75BC0012C4AA /* ScrechKit.docc in Sources */,
+				F30FDAA52A5D86AB006867F7 /* Sheet.swift in Sources */,
+				F30FDAA42A5D86AB006867F7 /* Image Picker.swift in Sources */,
+				F30FDAA32A5D86AB006867F7 /* ListParameter.swift in Sources */,
+				F30FDA912A5D86AB006867F7 /* Shapes.swift in Sources */,
+				F30FDA9B2A5D86AB006867F7 /* Color.swift in Sources */,
+				F30FDA9E2A5D86AB006867F7 /* getMimeType.swift in Sources */,
+				F30FDAA22A5D86AB006867F7 /* Scheme.swift in Sources */,
+				F30FDA6D2A5D8687006867F7 /* Font Weight.swift in Sources */,
+				F30FDAAA2A5D86AB006867F7 /* Dispatch.swift in Sources */,
+				F30FDAA02A5D86AB006867F7 /* Percent Encoding.swift in Sources */,
+				F30FDA9F2A5D86AB006867F7 /* ListLink.swift in Sources */,
+				F30FDAA72A5D86AB006867F7 /* MenuButton.swift in Sources */,
+				F30FDA6F2A5D8687006867F7 /* Font Design.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +524,7 @@
 		F30EC06F2A5D75BC0012C4AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8FQUA2F388;
@@ -436,6 +545,7 @@
 		F30EC0702A5D75BC0012C4AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8FQUA2F388;
