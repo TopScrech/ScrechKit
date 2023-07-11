@@ -10,7 +10,6 @@ public extension View {
     }
 }
 
-
 #if os(macOS) || os(iOS) && !os(xrOS)
 @available(iOS 17, macOS 14, *)
 public extension View {
