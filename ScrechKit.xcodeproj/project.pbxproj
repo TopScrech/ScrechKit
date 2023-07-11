@@ -105,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D6D9182A5D92AD00E56106 /* Package.swift */,
+				F3D6D91C2A5D954200E56106 /* Sources */,
 				F30EC0592A5D75BC0012C4AA /* ScrechKit */,
 				F30EC0652A5D75BC0012C4AA /* ScrechKitTests */,
 				F30EC0582A5D75BC0012C4AA /* Products */,
@@ -125,7 +126,6 @@
 			children = (
 				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
 				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
-				F3D6D91C2A5D954200E56106 /* Sources */,
 			);
 			path = ScrechKit;
 			sourceTree = "<group>";
