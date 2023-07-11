@@ -125,7 +125,7 @@
 			children = (
 				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
 				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
-				F3D6D91B2A5D950100E56106 /* Sources */,
+				F3D6D91C2A5D954200E56106 /* Sources */,
 			);
 			path = ScrechKit;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		F3D6D91B2A5D950100E56106 /* Sources */ = {
+		F3D6D91B2A5D950100E56106 /* ScrechKit */ = {
 			isa = PBXGroup;
 			children = (
 				F30FDA652A5D8687006867F7 /* Font */,
@@ -174,6 +174,14 @@
 				F30FDA8B2A5D86AB006867F7 /* SFButton.swift */,
 				F30FDA732A5D86AA006867F7 /* Shapes.swift */,
 				F30FDA882A5D86AB006867F7 /* Sheet.swift */,
+			);
+			path = ScrechKit;
+			sourceTree = "<group>";
+		};
+		F3D6D91C2A5D954200E56106 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6D91B2A5D950100E56106 /* ScrechKit */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
