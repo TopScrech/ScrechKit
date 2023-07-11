@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F30EC05C2A5D75BC0012C4AA /* ScrechKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */; };
 		F30EC0622A5D75BC0012C4AA /* ScrechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30EC0572A5D75BC0012C4AA /* ScrechKit.framework */; };
-		F30EC0672A5D75BC0012C4AA /* ScrechKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */; };
+		F30EC0672A5D75BC0012C4AA /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30EC0662A5D75BC0012C4AA /* Tests.swift */; };
 		F30EC0682A5D75BC0012C4AA /* ScrechKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F30FDA6B2A5D8687006867F7 /* Tightening.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA662A5D8687006867F7 /* Tightening.swift */; };
 		F30FDA6C2A5D8687006867F7 /* Font Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA672A5D8687006867F7 /* Font Size.swift */; };
@@ -53,7 +53,7 @@
 		F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrechKit.h; sourceTree = "<group>"; };
 		F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ScrechKit.docc; sourceTree = "<group>"; };
 		F30EC0612A5D75BC0012C4AA /* ScrechKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrechKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrechKitTests.swift; sourceTree = "<group>"; };
+		F30EC0662A5D75BC0012C4AA /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		F30FDA662A5D8687006867F7 /* Tightening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tightening.swift; sourceTree = "<group>"; };
 		F30FDA672A5D8687006867F7 /* Font Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font Size.swift"; sourceTree = "<group>"; };
 		F30FDA682A5D8687006867F7 /* Font Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font Weight.swift"; sourceTree = "<group>"; };
@@ -105,9 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				F3D6D9182A5D92AD00E56106 /* Package.swift */,
+				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
+				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
 				F3D6D91C2A5D954200E56106 /* Sources */,
-				F30EC0592A5D75BC0012C4AA /* ScrechKit */,
-				F30EC0652A5D75BC0012C4AA /* ScrechKitTests */,
+				F30EC0652A5D75BC0012C4AA /* Tests */,
 				F30EC0582A5D75BC0012C4AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,21 +122,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F30EC0592A5D75BC0012C4AA /* ScrechKit */ = {
+		F30EC0652A5D75BC0012C4AA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
-				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
+				F30EC0662A5D75BC0012C4AA /* Tests.swift */,
 			);
-			path = ScrechKit;
-			sourceTree = "<group>";
-		};
-		F30EC0652A5D75BC0012C4AA /* ScrechKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				F30EC0662A5D75BC0012C4AA /* ScrechKitTests.swift */,
-			);
-			path = ScrechKitTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		F30FDA652A5D8687006867F7 /* Font */ = {
@@ -328,7 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F30EC0672A5D75BC0012C4AA /* ScrechKitTests.swift in Sources */,
+				F30EC0672A5D75BC0012C4AA /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
