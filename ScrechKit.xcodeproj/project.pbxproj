@@ -79,6 +79,7 @@
 		F30FDA8B2A5D86AB006867F7 /* SFButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
 		F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Matched Effect.swift"; sourceTree = "<group>"; };
 		F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		F3D6D9182A5D92AD00E56106 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		F30EC04D2A5D75BC0012C4AA = {
 			isa = PBXGroup;
 			children = (
+				F3D6D9182A5D92AD00E56106 /* Package.swift */,
 				F30EC0592A5D75BC0012C4AA /* ScrechKit */,
 				F30EC0652A5D75BC0012C4AA /* ScrechKitTests */,
 				F30EC0582A5D75BC0012C4AA /* Products */,
