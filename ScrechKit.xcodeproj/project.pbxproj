@@ -125,27 +125,7 @@
 			children = (
 				F30EC05A2A5D75BC0012C4AA /* ScrechKit.h */,
 				F30EC05B2A5D75BC0012C4AA /* ScrechKit.docc */,
-				F30FDA652A5D8687006867F7 /* Font */,
-				F30FDA892A5D86AB006867F7 /* asUIImage.swift */,
-				F30FDA702A5D86AA006867F7 /* Camera Picker.swift */,
-				F30FDA7E2A5D86AB006867F7 /* Color.swift */,
-				F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */,
-				F30FDA712A5D86AA006867F7 /* formatBytes.swift */,
-				F30FDA7F2A5D86AB006867F7 /* formatDate.swift */,
-				F30FDA812A5D86AB006867F7 /* getMimeType.swift */,
-				F30FDA872A5D86AB006867F7 /* Image Picker.swift */,
-				F30FDA722A5D86AA006867F7 /* ListButton.swift */,
-				F30FDA822A5D86AB006867F7 /* ListLink.swift */,
-				F30FDA862A5D86AB006867F7 /* ListParameter.swift */,
-				F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */,
-				F30FDA8A2A5D86AB006867F7 /* MenuButton.swift */,
-				F30FDA832A5D86AB006867F7 /* Percent Encoding.swift */,
-				F30FDA842A5D86AB006867F7 /* PulseButton.swift */,
-				F30FDA802A5D86AB006867F7 /* Redacted.swift */,
-				F30FDA852A5D86AB006867F7 /* Scheme.swift */,
-				F30FDA8B2A5D86AB006867F7 /* SFButton.swift */,
-				F30FDA732A5D86AA006867F7 /* Shapes.swift */,
-				F30FDA882A5D86AB006867F7 /* Sheet.swift */,
+				F3D6D91B2A5D950100E56106 /* Sources */,
 			);
 			path = ScrechKit;
 			sourceTree = "<group>";
@@ -168,6 +148,34 @@
 				F30FDA6A2A5D8687006867F7 /* Font Design.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F3D6D91B2A5D950100E56106 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F30FDA652A5D8687006867F7 /* Font */,
+				F30FDA892A5D86AB006867F7 /* asUIImage.swift */,
+				F30FDA702A5D86AA006867F7 /* Camera Picker.swift */,
+				F30FDA7E2A5D86AB006867F7 /* Color.swift */,
+				F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */,
+				F30FDA712A5D86AA006867F7 /* formatBytes.swift */,
+				F30FDA7F2A5D86AB006867F7 /* formatDate.swift */,
+				F30FDA812A5D86AB006867F7 /* getMimeType.swift */,
+				F30FDA872A5D86AB006867F7 /* Image Picker.swift */,
+				F30FDA722A5D86AA006867F7 /* ListButton.swift */,
+				F30FDA822A5D86AB006867F7 /* ListLink.swift */,
+				F30FDA862A5D86AB006867F7 /* ListParameter.swift */,
+				F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */,
+				F30FDA8A2A5D86AB006867F7 /* MenuButton.swift */,
+				F30FDA832A5D86AB006867F7 /* Percent Encoding.swift */,
+				F30FDA842A5D86AB006867F7 /* PulseButton.swift */,
+				F30FDA802A5D86AB006867F7 /* Redacted.swift */,
+				F30FDA852A5D86AB006867F7 /* Scheme.swift */,
+				F30FDA8B2A5D86AB006867F7 /* SFButton.swift */,
+				F30FDA732A5D86AA006867F7 /* Shapes.swift */,
+				F30FDA882A5D86AB006867F7 /* Sheet.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
