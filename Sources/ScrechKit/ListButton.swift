@@ -3,7 +3,7 @@ import SwiftUI
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
 public struct ListButton: View {
     private let name: LocalizedStringResource
-    private let icon, actionIcon: String?
+    private let icon, actionIcon: String
     private let color: Color
     private let action: () -> Void
     
@@ -32,7 +32,7 @@ public struct ListButton: View {
     @ViewBuilder
     private var buttonLabel: some View {
         HStack {
-            if let icon {
+            if !icon.isEmpty {
                 Image(systemName: icon)
                     .title2()
                     .foregroundColor(.white)
@@ -48,7 +48,7 @@ public struct ListButton: View {
             
             Spacer()
             
-            if let actionIcon {
+            if !actionIcon.isEmpty {
                 Image(systemName: actionIcon)
                     .title3(.semibold)
                     .foregroundColor(.secondary)
