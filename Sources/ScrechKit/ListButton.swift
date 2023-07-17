@@ -10,7 +10,7 @@ public struct ListButton: View {
     public init (
         _ name: LocalizedStringResource,
         icon: String = "",
-        actionIcon: String,
+        actionIcon: String = "",
         color: Color = .blue,
         action: @escaping () -> Void = {}
     ) {
