@@ -44,13 +44,12 @@ public struct ListButton: View {
             }
             
             Text(name)
-                .semibold()
             
             Spacer()
             
             if !actionIcon.isEmpty {
                 Image(systemName: actionIcon)
-                    .title3(.semibold)
+//                    .title3(.semibold)
                     .foregroundColor(.secondary)
             }
         }
