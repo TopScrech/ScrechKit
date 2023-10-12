@@ -11,6 +11,12 @@ extension Int: ConvertibleToByteCount {
     }
 }
 
+extension UInt64: ConvertibleToByteCount {
+    public func toByteCount() -> Int64 {
+        return Int64(self)
+    }
+}
+
 extension Double: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
         return Int64(self)
