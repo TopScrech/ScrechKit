@@ -7,25 +7,25 @@ public protocol ConvertibleToByteCount {
 
 extension Int: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
-        return Int64(self)
+        Int64(self)
     }
 }
 
 extension UInt64: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
-        return Int64(self)
+        Int64(self)
     }
 }
 
 extension Double: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
-        return Int64(self)
+        Int64(self)
     }
 }
 
 extension Int64: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
-        return self
+        self
     }
 }
 
