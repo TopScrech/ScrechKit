@@ -36,6 +36,7 @@
 		F30FDAA92A5D86AB006867F7 /* Matched Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8C2A5D86AB006867F7 /* Matched Effect.swift */; };
 		F30FDAAA2A5D86AB006867F7 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */; };
 		F373B74C2ADC4DEB00D33DDD /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373B74B2ADC4DEB00D33DDD /* UIDevice.swift */; };
+		F3F5382F2AE8128200D3B5B4 /* openSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5382E2AE8128200D3B5B4 /* openSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		F30FDA8D2A5D86AB006867F7 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		F373B74B2ADC4DEB00D33DDD /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		F3D6D9182A5D92AD00E56106 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		F3F5382E2AE8128200D3B5B4 /* openSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				F30FDA712A5D86AA006867F7 /* formatBytes.swift */,
 				F30FDA7F2A5D86AB006867F7 /* formatDate.swift */,
 				F30FDA812A5D86AB006867F7 /* getMimeType.swift */,
+				F3F5382E2AE8128200D3B5B4 /* openSettings.swift */,
 				F30FDA872A5D86AB006867F7 /* Image Picker.swift */,
 				F30FDA722A5D86AA006867F7 /* ListButton.swift */,
 				F373B74B2ADC4DEB00D33DDD /* UIDevice.swift */,
@@ -310,6 +313,7 @@
 				F30FDA6D2A5D8687006867F7 /* Font Weight.swift in Sources */,
 				F30FDAAA2A5D86AB006867F7 /* Dispatch.swift in Sources */,
 				F30FDAA02A5D86AB006867F7 /* Percent Encoding.swift in Sources */,
+				F3F5382F2AE8128200D3B5B4 /* openSettings.swift in Sources */,
 				F30FDA9F2A5D86AB006867F7 /* ListLink.swift in Sources */,
 				F30FDAA72A5D86AB006867F7 /* MenuButton.swift in Sources */,
 				F30FDA6F2A5D8687006867F7 /* Font Design.swift in Sources */,
