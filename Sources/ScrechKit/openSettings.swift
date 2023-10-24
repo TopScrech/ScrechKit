@@ -1,7 +1,7 @@
 #if !os(macOS) && !os(watchOS)
 import Foundation
 
-func openSettings(
+public func openSettings(
     _ onCompletion: @escaping () -> Void = {},
     onFailure: @escaping () -> Void = {}
 ) {
