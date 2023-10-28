@@ -1,4 +1,4 @@
-#if !os(macOS) && !os(watchOS)
+#if !os(macOS) && !os(watchOS) && !os(xrOS)
 import SwiftUI
 
 public extension UIDevice {
