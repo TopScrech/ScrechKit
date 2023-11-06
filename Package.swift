@@ -13,6 +13,10 @@ let package = Package(
         .target(
             name: "ScrechKit",
             dependencies: []
+        ),
+        .testTarget(
+            name: "Tests",
+            dependencies: ["ScrechKit"]
         )
     ]
 )

@@ -3,8 +3,6 @@ import XCTest
 
 class ScrechKitTests: XCTestCase {
     func testPerformanceExample() throws {
-        self.measure {
-            
-        }
+        print(formatBytes(1131312.0101303131))
     }
 }

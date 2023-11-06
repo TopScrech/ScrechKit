@@ -39,7 +39,7 @@ public func formatBytes <T: ConvertibleToByteCount>(
     guard byteCount != 0 else { return "-" }
     
     let formatter = ByteCountFormatter()
-    formatter.allowedUnits = [.useBytes, .useKB, .useMB, .useGB]
+    formatter.allowedUnits = .useAll
     formatter.countStyle = countStyle
     formatter.includesUnit = withUnitName
     
