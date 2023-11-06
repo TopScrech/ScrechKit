@@ -17,6 +17,7 @@ public struct ListParameter: View {
             
             Text(parameter)
                 .foregroundColor(.secondary)
+                .textSelection(.enabled)
         }
     }
 }
