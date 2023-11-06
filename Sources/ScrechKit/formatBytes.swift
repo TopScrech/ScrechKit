@@ -42,23 +42,24 @@ public func formatBytes <T: ConvertibleToByteCount>(
     formatter.allowedUnits = .useAll
     formatter.countStyle = countStyle
     formatter.includesUnit = withUnitName
-    formatter.isAdaptive = false
     
     let formattedString = formatter.string(fromByteCount: byteCount)
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
 
     if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
-        let integerPart = Int(number)
-        let decimalPart = number.truncatingRemainder(dividingBy: 1)
+        let integerPart = Double(number).roundTo(1)
         
-        if decimalPart > 0 {
-            split[0] = Substring(String(format: "%.1f", number))
-        } else {
-            split[0] = Substring(String(integerPart))
-        }
+        split[0] = Substring(String(integerPart))
     }
 
     let finalString = split.joined(separator: " ")
     
     return finalString
+}
+
+extension Double {
+    func roundTo(_ numFractionDigits: Int) -> Double {
+        let factor = pow(10, Double(numFractionDigits))
+        return (self * factor).rounded() / factor
+    }
 }
