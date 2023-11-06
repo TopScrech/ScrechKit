@@ -42,6 +42,8 @@ public func formatBytes <T: ConvertibleToByteCount>(
     formatter.allowedUnits = .useAll
     formatter.countStyle = countStyle
     formatter.includesUnit = withUnitName
+    formatter.isAdaptive = false
+    formatter.zeroPadsFractionDigits = true
     
     return formatter.string(fromByteCount: byteCount)
 }
