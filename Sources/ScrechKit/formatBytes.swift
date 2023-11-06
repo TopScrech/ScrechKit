@@ -43,7 +43,16 @@ public func formatBytes <T: ConvertibleToByteCount>(
     formatter.countStyle = countStyle
     formatter.includesUnit = withUnitName
     formatter.isAdaptive = false
-    formatter.zeroPadsFractionDigits = true
     
-    return formatter.string(fromByteCount: byteCount)
+    let formattedString = formatter.string(fromByteCount: byteCount)
+    var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
+    
+    if let numberString = split.first, let number = Double(numberString.replacingOccurrences(of: ",", with: ".")) {
+        let roundedNumber = round(number * 10) / 10
+        split[0] = Substring(String(format: "%.1f", roundedNumber))
+    }
+    
+    let finalString = split.joined(separator: " ")
+
+    return finalString
 }
