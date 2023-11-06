@@ -30,7 +30,7 @@ extension Int64: ConvertibleToByteCount {
 }
 
 @available(iOS 6, macOS 10.8, tvOS 9, watchOS 2, *)
-public func formatBytes <T: ConvertibleToByteCount>(
+public func formatBytes<T: ConvertibleToByteCount>(
     _ bytes: T,
     countStyle: ByteCountFormatter.CountStyle = .file,
     withUnitName: Bool = true
@@ -43,23 +43,23 @@ public func formatBytes <T: ConvertibleToByteCount>(
     formatter.countStyle = countStyle
     formatter.includesUnit = withUnitName
     
-    let formattedString = formatter.string(fromByteCount: byteCount)
+    var formattedString = formatter.string(fromByteCount: byteCount)
+    formattedString = formattedString.replacingOccurrences(of: ",", with: ".") // Adjust according to locale if needed
+
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
 
-    if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
-        let integerPart = Double(number).roundedToSingleDecimalOrInt()
-        
-        split[0] = Substring(String(integerPart))
+    if let firstComponent = split.first, let number = Double(firstComponent) {
+        let roundedNumber = number.roundedToSingleDecimalOrInt()
+        split[0] = "\(roundedNumber)"
     }
 
-    let finalString = split.joined(separator: " ")
-    
-    return finalString
+    return split.joined(separator: " ")
 }
 
 extension Double {
     func roundedToSingleDecimalOrInt() -> Double {
         let roundedValue = (self * 10).rounded() / 10
-        return (roundedValue.truncatingRemainder(dividingBy: 1) == 0) ? Double(Int(self)) : roundedValue
+        let integerPart = Int(roundedValue)
+        return roundedValue - Double(integerPart) == 0 ? Double(integerPart) : roundedValue
     }
 }
