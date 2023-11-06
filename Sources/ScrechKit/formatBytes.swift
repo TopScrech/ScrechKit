@@ -47,20 +47,18 @@ public func formatBytes <T: ConvertibleToByteCount>(
     let formattedString = formatter.string(fromByteCount: byteCount)
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
 
-    if var firstComponent = split.first {
+    if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
+        let integerPart = Int(number)
+        let decimalPart = number.truncatingRemainder(dividingBy: 1)
         
-        firstComponent = Substring(firstComponent.replacingOccurrences(of: ",", with: "."))
-        
-        if let number = Double(firstComponent) {
-            if (number * 10).truncatingRemainder(dividingBy: 1) == 0 {
-                split[0] = Substring(String(format: "%.0f", number))
-            } else {
-                split[0] = Substring(String(format: "%.1f", number))
-            }
+        if decimalPart > 0 {
+            split[0] = Substring(String(format: "%.1f", number))
+        } else {
+            split[0] = Substring(String(integerPart))
         }
     }
 
     let finalString = split.joined(separator: " ")
-
+    
     return finalString
 }
