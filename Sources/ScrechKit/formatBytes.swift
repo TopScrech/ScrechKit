@@ -45,21 +45,20 @@ public func formatBytes<T: ConvertibleToByteCount>(
     
     var formattedString = formatter.string(fromByteCount: byteCount)
     formattedString = formattedString.replacingOccurrences(of: ",", with: ".") // Adjust according to locale if needed
-
+    
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
-
-    if let firstComponent = split.first, let number = Double(firstComponent) {
+    
+    if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
         let roundedNumber = number.roundedToSingleDecimalOrInt()
-        split[0] = "\(roundedNumber)"
+        split[0] = Substring(String(format: roundedNumber.truncatingRemainder(dividingBy: 1) == 0 ? "%.0f" : "%.1f", roundedNumber))
     }
-
+    
     return split.joined(separator: " ")
 }
 
 extension Double {
     func roundedToSingleDecimalOrInt() -> Double {
         let roundedValue = (self * 10).rounded() / 10
-        let integerPart = Int(roundedValue)
-        return roundedValue - Double(integerPart) == 0 ? Double(integerPart) : roundedValue
+        return roundedValue.truncatingRemainder(dividingBy: 1) == 0 ? floor(roundedValue) : roundedValue
     }
 }
