@@ -47,7 +47,7 @@ public func formatBytes <T: ConvertibleToByteCount>(
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
 
     if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
-        let integerPart = Double(number).roundTo(1)
+        let integerPart = Double(number).roundedToSingleDecimalOrInt()
         
         split[0] = Substring(String(integerPart))
     }
@@ -58,8 +58,8 @@ public func formatBytes <T: ConvertibleToByteCount>(
 }
 
 extension Double {
-    func roundTo(_ numFractionDigits: Int) -> Double {
-        let factor = pow(10, Double(numFractionDigits))
-        return (self * factor).rounded() / factor
+    func roundedToSingleDecimalOrInt() -> Double {
+        let roundedValue = (self * 10).rounded() / 10
+        return (roundedValue.truncatingRemainder(dividingBy: 1) == 0) ? Double(Int(self)) : roundedValue
     }
 }
