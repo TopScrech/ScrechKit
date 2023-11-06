@@ -15,10 +15,12 @@ public struct ListParameter: View {
             
             Spacer()
             
-            if #available(iOS 15, *) {
+            if #available(iOS 15, watchOS 7, macOS 12, tvOS 14, *) {
                 Text(parameter)
                     .foregroundColor(.secondary)
+#if !os(watchOS) && !os(tvOS)
                     .textSelection(.enabled)
+#endif
             } else {
                 Text(parameter)
                     .foregroundColor(.secondary)

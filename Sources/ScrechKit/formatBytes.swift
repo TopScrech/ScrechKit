@@ -30,7 +30,7 @@ extension Int64: ConvertibleToByteCount {
 }
 
 @available(iOS 6, macOS 10.8, tvOS 9, watchOS 2, *)
-public func formatBytes<T: ConvertibleToByteCount>(
+public func formatBytes <T: ConvertibleToByteCount>(
     _ bytes: T,
     countStyle: ByteCountFormatter.CountStyle = .file,
     withUnitName: Bool = true
