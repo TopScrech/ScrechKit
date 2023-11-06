@@ -15,9 +15,14 @@ public struct ListParameter: View {
             
             Spacer()
             
-            Text(parameter)
-                .foregroundColor(.secondary)
-                .textSelection(.enabled)
+            if #available(iOS 15, *) {
+                Text(parameter)
+                    .foregroundColor(.secondary)
+                    .textSelection(.enabled)
+            } else {
+                Text(parameter)
+                    .foregroundColor(.secondary)
+            }
         }
     }
 }
