@@ -1,6 +1,5 @@
 import Foundation
 @_exported import SwiftUI
-@_exported import OSLog
 
 public protocol ConvertibleToByteCount {
     func toByteCount() -> Int64
