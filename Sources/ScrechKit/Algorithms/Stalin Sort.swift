@@ -1,9 +1,15 @@
 import Foundation
 
-public func stalinSort <Element: Comparable>(_ array: [Element]) -> [Element] {
-    var last: Element?
-    return array.filter { elem in
-        defer { last = elem }
-        return last == nil || elem >= last!
+public func stalinSort <Element: Comparable> (_ array: [Element]) -> [Element] {
+    var result: [Element] = []
+
+    for elem in array {
+        if let last = result.last, elem < last {
+            continue
+        }
+        
+        result.append(elem)
     }
+
+    return result
 }
