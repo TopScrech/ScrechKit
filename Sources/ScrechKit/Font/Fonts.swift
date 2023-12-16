@@ -5,21 +5,27 @@ public extension View {
     func largeTitle() -> some View {
         self.font(.largeTitle)
     }
+    
     func title() -> some View {
         self.font(.title)
     }
+    
     func headline() -> some View {
         self.font(.headline)
     }
+    
     func callout() -> some View {
         self.font(.callout)
     }
+    
     func subheadline() -> some View {
         self.font(.subheadline)
     }
+    
     func footnote() -> some View {
         self.font(.footnote)
     }
+    
     func caption() -> some View {
         self.font(.caption)
     }
@@ -30,9 +36,11 @@ public extension View {
     func title2() -> some View {
         self.font(.title2)
     }
+    
     func title3() -> some View {
         self.font(.title3)
     }
+    
     func caption2() -> some View {
         self.font(.caption2)
     }
