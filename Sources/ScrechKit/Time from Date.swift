@@ -1,6 +1,6 @@
 import Foundation
 
-func timeFromDate(_ date: Date) -> String {
+public func timeFromDate(_ date: Date) -> String {
     let formatter = DateFormatter()
     formatter.dateFormat = "HH:mm"
     
