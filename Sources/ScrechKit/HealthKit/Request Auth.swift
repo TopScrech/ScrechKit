@@ -17,3 +17,15 @@ public extension HKHealthStore {
         }
     }
 }
+
+@available(iOS 8, macOS 13, watchOS 2, *)
+public extension HKQuantityType {
+    static func bloodGlucose() -> HKQuantityType? {
+        self.quantityType(forIdentifier: .bloodGlucose)
+    }
+}
+// HKQuantityType.quantityType(forIdentifier: .bloodGlucose)
+// HKQuantityType.bloodGlucose()
+
+
+//class func quantityType(forIdentifier identifier: HKQuantityTypeIdentifier) -> HKQuantityType?
