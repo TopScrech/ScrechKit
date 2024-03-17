@@ -11,7 +11,7 @@ public extension HKHealthStore {
 
 @available(iOS 12, macOS 13, watchOS 5, *)
 public extension HKHealthStore {
-    func getRequestForAuthorization(_ types: Set<HKSampleType>, completion: @escaping (HKAuthorizationRequestStatus, Error?) -> Void) {
+    func getRequestStatusForAuthorization(_ types: Set<HKSampleType>, completion: @escaping (HKAuthorizationRequestStatus, Error?) -> Void) {
         self.getRequestStatusForAuthorization(toShare: types, read: types) { status, error in
             completion(status, error)
         }
