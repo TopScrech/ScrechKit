@@ -1,6 +1,6 @@
 import Foundation
 
-func openApp(_ bundleID: String) -> Bool {
+public func openApp(_ bundleID: String) -> Bool {
     guard let LSApplicationWorkspace = objc_getClass("LSApplicationWorkspace") as? NSObject.Type else {
         return false
     }
