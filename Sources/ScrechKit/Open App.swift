@@ -2,8 +2,8 @@ import Foundation
 
 public func openApp(
     _ bundleID: String,
-    onSuccess: @escaping () -> Void = {},
-    onFailure: @escaping () -> Void = {}
+    onFailure: @escaping () -> Void = {},
+    onSuccess: @escaping () -> Void = {}
 ) {
     guard let LSApplicationWorkspace = objc_getClass("LSApplicationWorkspace") as? NSObject.Type else {
         onFailure()
