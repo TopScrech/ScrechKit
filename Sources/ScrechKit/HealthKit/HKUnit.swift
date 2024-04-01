@@ -1,3 +1,5 @@
+#if canImport(HealthKit)
+
 import HealthKit
 
 @available(iOS 8, macOS 13, watchOS 2, *)
@@ -6,3 +8,5 @@ public extension HKUnit {
         .gramUnit(with: .kilo)
     }
 }
+
+#endif
