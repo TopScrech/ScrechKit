@@ -2,8 +2,7 @@ import Foundation
 
 public func openApp(
     _ bundleID: String,
-    onFailure: @escaping () -> Void = {},
-    onSuccess: @escaping () -> Void = {}
+    onFailure: @escaping () -> Void = {}
 ) {
     guard let LSApplicationWorkspace = objc_getClass("LSApplicationWorkspace") as? NSObject.Type else {
         onFailure()
@@ -17,9 +16,7 @@ public func openApp(
     
     let open = workspace.perform(Selector(("openApplicationWithBundleID:")), with: bundleID) != nil
     
-    if open {
-        onSuccess()
-    } else {
+    if !open {
         onFailure()
     }
 }
