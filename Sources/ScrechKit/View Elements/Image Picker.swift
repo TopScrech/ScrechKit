@@ -1,4 +1,5 @@
 #if os(iOS)
+
 import SwiftUI
 import PhotosUI
 
@@ -24,8 +25,10 @@ public struct ImagePicker: UIViewControllerRepresentable {
     public func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
         config.filter = .images
+        
         let picker = PHPickerViewController(configuration: config)
         picker.delegate = context.coordinator
+        
         return picker
     }
     
@@ -55,4 +58,5 @@ public struct ImagePicker: UIViewControllerRepresentable {
         }
     }
 }
+
 #endif

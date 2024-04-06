@@ -1,4 +1,5 @@
-#if !os(macOS) && !os(watchOS) && !os(xrOS)
+#if !os(macOS) && !os(watchOS) && !os(visionOS)
+
 import SwiftUI
 
 public extension UIDevice {
@@ -113,4 +114,5 @@ public extension UIDevice {
         return mapToDevice(identifier: identifier)
     }()
 }
+
 #endif

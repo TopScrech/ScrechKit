@@ -1,7 +1,7 @@
 import Foundation
 
 @available(iOS 8, macOS 10.10, tvOS 9, watchOS 2, *)
-public func delay (
+public func delay(
     _ seconds: Double = 1,
     execute: @escaping () -> Void
 ) {

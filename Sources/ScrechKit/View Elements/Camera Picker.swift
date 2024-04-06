@@ -1,4 +1,5 @@
 #if os(iOS)
+
 import SwiftUI
 
 @available(iOS 14, *)
@@ -26,6 +27,7 @@ public struct CameraPicker: UIViewControllerRepresentable {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
         picker.delegate = context.coordinator
+        
         return picker
     }
     
@@ -51,4 +53,5 @@ public struct CameraPicker: UIViewControllerRepresentable {
         }
     }
 }
+
 #endif

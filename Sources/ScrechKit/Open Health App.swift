@@ -1,6 +1,7 @@
+#if os(iOS)
+
 import Foundation
 
-#if os(iOS)
 public func openHealthApp() {
     if let url = URL(string: "x-apple-health://") {
         if UIApplication.shared.canOpenURL(url) {
@@ -10,4 +11,5 @@ public func openHealthApp() {
         }
     }
 }
+
 #endif

@@ -36,7 +36,10 @@ public func formatBytes<T: ConvertibleToByteCount>(
     withUnitName: Bool = true
 ) -> String {
     let byteCount = bytes.toByteCount()
-    guard byteCount != 0 else { return "-" }
+    
+    guard byteCount != 0 else {
+        return "-"
+    }
     
     let formatter = ByteCountFormatter()
     formatter.allowedUnits = .useAll
@@ -50,6 +53,7 @@ public func formatBytes<T: ConvertibleToByteCount>(
     
     if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
         let roundedNumber = number.roundedToSingleDecimalOrInt()
+        
         split[0] = Substring(String(format: roundedNumber.truncatingRemainder(dividingBy: 1) == 0 ? "%.0f" : "%.1f", roundedNumber))
     }
     
@@ -59,6 +63,7 @@ public func formatBytes<T: ConvertibleToByteCount>(
 extension Double {
     func roundedToSingleDecimalOrInt() -> Double {
         let roundedValue = (self * 10).rounded() / 10
+        
         return roundedValue.truncatingRemainder(dividingBy: 1) == 0 ? floor(roundedValue) : roundedValue
     }
 }

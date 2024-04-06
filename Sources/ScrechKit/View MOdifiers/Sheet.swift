@@ -10,7 +10,8 @@ public extension View {
     }
 }
 
-#if os(macOS) || os(iOS) && !os(xrOS)
+#if os(macOS) || os(iOS) && !os(visionOS)
+
 @available(iOS 17, macOS 14, *)
 public extension View {
     func inspector <Content> (
@@ -20,4 +21,5 @@ public extension View {
         self.inspector(isPresented: isPresented, content: content)
     }
 }
+
 #endif

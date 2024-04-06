@@ -3,7 +3,10 @@ import Foundation
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
 public func timeSinceISO(_ date: String) -> LocalizedStringResource {
     let formatter = ISO8601DateFormatter()
-    guard let date = formatter.date(from: date) else { return "-" }
+    
+    guard let date = formatter.date(from: date) else {
+        return "-"
+    }
     
     let sinceNowSeconds = Int(date.timeIntervalSinceNow * -1)
     
@@ -39,5 +42,6 @@ public func formatISO(_ date: String) -> String {
     }
     
     formatter.dateFormat = "dd-MM-yyyy"
+    
     return formatter.string(from: date)
 }

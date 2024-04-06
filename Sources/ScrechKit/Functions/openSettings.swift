@@ -1,4 +1,5 @@
 #if !os(macOS) && !os(watchOS)
+
 import Foundation
 
 public func openSettings(
@@ -13,4 +14,5 @@ public func openSettings(
         onFailure()
     }
 }
+
 #endif
