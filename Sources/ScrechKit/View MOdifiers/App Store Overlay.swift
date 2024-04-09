@@ -1,3 +1,5 @@
+#if os(iOS) || os(visionOS)
+
 import SwiftUI
 import StoreKit
 
@@ -16,3 +18,5 @@ public extension View {
         }
     }
 }
+
+#endif
