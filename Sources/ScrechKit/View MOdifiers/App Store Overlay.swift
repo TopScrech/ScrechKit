@@ -6,7 +6,7 @@ public extension View {
     func appStoreOverlay <T: CustomStringConvertible> (
         _ isPresented: Binding<Bool>,
         id: T,
-        position: SKOverlay.Position
+        position: SKOverlay.Position = .bottom
     ) -> some View {
         self.appStoreOverlay(isPresented: isPresented) {
             SKOverlay.AppConfiguration(
@@ -16,4 +16,3 @@ public extension View {
         }
     }
 }
-
