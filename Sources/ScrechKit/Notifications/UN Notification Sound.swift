@@ -1,19 +1,24 @@
-#if os(iOS) || os(macOS)
+#if os(macOS)
 
 import UserNotifications
 
+#if os(iOS)
+
+@available(iOS 15.2, *)
 public extension UNNotificationSound {
-    @available(iOS 15.2, *)
     static func ringtone(_ name: String) -> UNNotificationSound {
         .ringtoneSoundNamed(.init(name))
     }
+}
+
+#endif
     
-    @available(iOS 12, macOS 10.14, *)
+@available(iOS 12, macOS 10.14, *)
+public extension UNNotificationSound {
     static func critical(_ name: String) -> UNNotificationSound {
         .criticalSoundNamed(.init(name))
     }
     
-    @available(iOS 12, macOS 10.14, *)
     static func critical(_ name: String, volume: Float) -> UNNotificationSound {
         .criticalSoundNamed(.init(name), withAudioVolume: volume)
     }
