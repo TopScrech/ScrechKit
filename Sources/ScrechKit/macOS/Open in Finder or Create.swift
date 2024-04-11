@@ -1,7 +1,7 @@
 #if os(macOS)
 
 @available(macOS 10, *)
-func openInFinderOrCreate(_ folderPath: String) {
+public func openInFinderOrCreate(_ folderPath: String) {
     let fileManager = FileManager.default
     
     // Check existance

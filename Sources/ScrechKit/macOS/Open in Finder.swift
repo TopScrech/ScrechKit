@@ -1,7 +1,7 @@
 #if os(macOS)
 
 @available(macOS 10, *)
-func openInFinder(_ fullPath: String? = nil, rootedAt: String) {
+public func openInFinder(_ fullPath: String? = nil, rootedAt: String) {
     NSWorkspace.shared.selectFile(fullPath, inFileViewerRootedAtPath: rootedAt)
 }
 
