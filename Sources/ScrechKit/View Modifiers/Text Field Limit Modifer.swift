@@ -22,7 +22,7 @@ struct TextFieldLimitModifer: ViewModifier {
 }
 
 @available(iOS 13, watchOS 6, tvOS 13, macOS 10.15, *)
-extension View {
+public extension View {
     func limitInputLength(_ value: Binding<String>, length: Int) -> some View {
         self.modifier(TextFieldLimitModifer(value: value, length: length))
     }
