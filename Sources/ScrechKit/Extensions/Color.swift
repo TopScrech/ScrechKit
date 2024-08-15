@@ -25,7 +25,7 @@ public extension Color {
 
 // @AppStorage support
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
-extension Color: RawRepresentable {
+extension Color: @retroactive RawRepresentable {
     public init?(rawValue: String) {
         guard let data = Data(base64Encoded: rawValue) else {
             self = .black
