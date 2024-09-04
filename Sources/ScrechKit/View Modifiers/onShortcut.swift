@@ -1,3 +1,5 @@
+#if os(macOS)
+
 import SwiftUI
 
 @available(macOS 11, *)
@@ -18,3 +20,5 @@ public extension View {
         }
     }
 }
+
+#endif
