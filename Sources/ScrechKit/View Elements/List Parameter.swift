@@ -1,12 +1,15 @@
 import SwiftUI
 
 @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
-public struct ListParameter: View {
-    private let name, parameter: String
+public struct ListParam: View {
+    private let name: LocalizedStringKey
+    private let icon: String
+    private let param: String
     
-    public init(_ name: String = "", parameter: String = "") {
+    public init(_ name: LocalizedStringKey, icon: String = "", param: String = "") {
         self.name = name
-        self.parameter = parameter
+        self.icon = icon
+        self.param = param
     }
     
     public var body: some View {
@@ -15,25 +18,41 @@ public struct ListParameter: View {
             
             Spacer()
             
-            if #available(iOS 15, watchOS 7, macOS 12, tvOS 14, *) {
-                Text(parameter)
-                    .foregroundColor(.secondary)
-#if !os(watchOS) && !os(tvOS)
-                    .textSelection(.enabled)
-#endif
-            } else {
-                Text(parameter)
-                    .foregroundColor(.secondary)
+            Group {
+                if icon.isEmpty {
+                    Text(name)
+                } else {
+                    Label(name, systemImage: icon)
+                }
             }
+            .enableSelection()
         }
     }
 }
 
-@available(iOS 13, macOS 11, tvOS 13, watchOS 7, *)
-struct ListParameter_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            ListParameter("Preview", parameter: "123")
+@available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
+struct EnableSelection: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 15, watchOS 7, macOS 12, tvOS 14, *) {
+            content
+#if !os(watchOS) && !os(tvOS)
+                .textSelection(.enabled)
+#endif
+        } else {
+            content
         }
+    }
+}
+
+public extension View {
+    func enableSelection() -> some View {
+        modifier(EnableSelection())
+    }
+}
+
+@available(iOS 13, macOS 11, tvOS 13, watchOS 7, *)
+#Preview {
+    List {
+        ListParam("Preview", param: "123")
     }
 }
