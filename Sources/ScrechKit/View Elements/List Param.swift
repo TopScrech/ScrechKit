@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
+@available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
 public struct ListParam: View {
     private let name: LocalizedStringKey
     private let icon: String
@@ -44,13 +44,14 @@ struct EnableSelection: ViewModifier {
     }
 }
 
+@available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
 public extension View {
     func enableSelection() -> some View {
         modifier(EnableSelection())
     }
 }
 
-@available(iOS 13, macOS 11, tvOS 13, watchOS 7, *)
+@available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
 #Preview {
     List {
         ListParam("Preview", param: "123")
