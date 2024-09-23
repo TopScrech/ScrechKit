@@ -14,18 +14,16 @@ public struct ListParam: View {
     
     public var body: some View {
         HStack {
-            Text(name)
+            if icon.isEmpty {
+                Text(name)
+            } else {
+                Label(name, systemImage: icon)
+            }
             
             Spacer()
             
-            Group {
-                if icon.isEmpty {
-                    Text(name)
-                } else {
-                    Label(name, systemImage: icon)
-                }
-            }
-            .enableSelection()
+            Text(param)
+                .enableSelection()
         }
     }
 }
