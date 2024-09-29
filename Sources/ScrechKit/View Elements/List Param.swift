@@ -13,6 +13,18 @@ public struct ListParam: View {
     }
     
     public var body: some View {
+#if os(tvOS)
+        Button {
+            
+        } label: {
+            label
+        }
+#else
+        label
+#endif
+    }
+    
+    private var label: some  View {
         HStack {
             if icon.isEmpty {
                 Text(name)
