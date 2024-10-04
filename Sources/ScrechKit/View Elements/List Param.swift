@@ -43,6 +43,7 @@ public struct ListParam: View {
             Text(param)
                 .enableSelection()
                 .secondary()
+                .multilineTextAlignment(.trailing)
         }
     }
 }
