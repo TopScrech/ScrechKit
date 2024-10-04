@@ -1,4 +1,3 @@
-import Foundation
 @_exported import SwiftUI
 
 public protocol ConvertibleToByteCount {
