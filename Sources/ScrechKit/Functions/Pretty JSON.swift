@@ -1,20 +1,27 @@
 import Foundation
 
-public func prettyJSON(_ data: Data?) throws -> String {
-    guard let data else {
-        throw NSError(domain: "prettyJSON", code: 0, userInfo: [NSLocalizedDescriptionKey: "Data is nil"])
-    }
-    
+public func prettyJSON(_ input: Any?) -> String? {
     do {
-        let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-        let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
-        
-        if let jsonString = String(data: jsonData, encoding: .utf8) {
-            return jsonString
+        let jsonData: Data
+        if let string = input as? String, let data = string.data(using: .utf8) {
+            jsonData = data
+        } else if let data = input as? Data {
+            jsonData = data
         } else {
-            throw NSError(domain: "prettyJSON", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to encode JSON string"])
+            return nil
+        }
+        
+        if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+            let prettyData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
+            
+            if let prettyJson = String(data: prettyData, encoding: .utf8) {
+                print(prettyJson)
+                return prettyJson
+            }
         }
     } catch {
-        throw error
+        return nil
     }
+    
+    return nil
 }
