@@ -13,7 +13,9 @@ struct PopTip: ViewModifier {
     func body(content: Content) -> some View {
         if #available(iOS 18, macOS 15, tvOS 18, visionOS 2, *) {
             content
+#if !os(watchOS)
                 .popoverTip(tip, action: action)
+#endif
         } else {
             content
         }
