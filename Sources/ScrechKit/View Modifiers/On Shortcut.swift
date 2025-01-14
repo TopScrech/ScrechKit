@@ -1,6 +1,7 @@
+#if !os(tvOS)
 import SwiftUI
 
-@available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
+@available(iOS 14, macOS 11, watchOS 7, *)
 public struct OnShortcutModifier: ViewModifier {
     private let key: Int
     private let action: () -> Void
@@ -18,9 +19,10 @@ public struct OnShortcutModifier: ViewModifier {
     }
 }
 
-@available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
+@available(iOS 14, macOS 11, watchOS 7, *)
 public extension View {
     func onShortcut(_ key: Int, action: @escaping () -> Void) -> some View {
         modifier(OnShortcutModifier(key, action: action))
     }
 }
+#endif
