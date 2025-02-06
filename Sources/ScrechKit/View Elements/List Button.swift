@@ -2,13 +2,13 @@ import SwiftUI
 
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
 public struct ListButton: View {
-    private let name: LocalizedStringResource
+    private let name: LocalizedStringKey
     private let icon, actionIcon: String
     private let color: Color
     private let action: () -> Void
     
     public init (
-        _ name: LocalizedStringResource,
+        _ name: LocalizedStringKey,
         icon: String = "",
         actionIcon: String = "",
         color: Color = .blue,
@@ -49,7 +49,7 @@ public struct ListButton: View {
             
             if !actionIcon.isEmpty {
                 Image(systemName: actionIcon)
-//                    .title3(.semibold)
+                //                    .title3(.semibold)
                     .foregroundColor(.secondary)
             }
         }
