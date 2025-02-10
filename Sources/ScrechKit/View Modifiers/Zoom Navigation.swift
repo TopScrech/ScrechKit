@@ -11,7 +11,7 @@ public struct NavigationZoomTransition: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        if #available(iOS 18, *) {
+        if #available(iOS 18, macOS 15, tvOS 18, watchOS 11, visionOS 2, *) {
             content
                 .navigationTransition(.zoom(sourceID: sourceID, in: namespace))
         } else {
@@ -31,7 +31,7 @@ public struct MatchedTransitionSource: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        if #available(iOS 18.0, *) {
+        if #available(iOS 18, macOS 15, tvOS 18, watchOS 11, visionOS 2, *) {
             content
                 .matchedTransitionSource(id: id, in: namespace)
         } else {
