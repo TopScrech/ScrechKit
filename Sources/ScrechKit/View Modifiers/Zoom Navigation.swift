@@ -1,6 +1,7 @@
+#if !os(macOS)
 import SwiftUI
 
-@available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
+@available(iOS 17, tvOS 17, watchOS 10, *)
 public struct NavigationZoomTransition: ViewModifier {
     private let sourceID: String
     private let namespace: Namespace.ID
@@ -11,7 +12,7 @@ public struct NavigationZoomTransition: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        if #available(iOS 18, macOS 15, tvOS 18, watchOS 11, visionOS 2, *) {
+        if #available(iOS 18, tvOS 18, watchOS 11, visionOS 2, *) {
             content
                 .navigationTransition(.zoom(sourceID: sourceID, in: namespace))
         } else {
@@ -20,7 +21,7 @@ public struct NavigationZoomTransition: ViewModifier {
     }
 }
 
-@available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
+@available(iOS 17, tvOS 17, watchOS 10, *)
 public struct MatchedTransitionSource: ViewModifier {
     private let id: String
     private let namespace: Namespace.ID
@@ -31,7 +32,7 @@ public struct MatchedTransitionSource: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        if #available(iOS 18, macOS 15, tvOS 18, watchOS 11, visionOS 2, *) {
+        if #available(iOS 18, tvOS 18, watchOS 11, visionOS 2, *) {
             content
                 .matchedTransitionSource(id: id, in: namespace)
         } else {
@@ -40,7 +41,7 @@ public struct MatchedTransitionSource: ViewModifier {
     }
 }
 
-@available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
+@available(iOS 17, tvOS 17, watchOS 10, *)
 public extension View {
     func navigationZoomTransition(_ sourceID: String, in namespace: Namespace.ID) -> some View {
         modifier(NavigationZoomTransition(sourceID, namespace: namespace))
@@ -50,3 +51,4 @@ public extension View {
         modifier(MatchedTransitionSource(id, namespace: namespace))
     }
 }
+#endif
