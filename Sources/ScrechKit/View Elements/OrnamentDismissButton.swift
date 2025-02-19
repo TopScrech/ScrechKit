@@ -1,10 +1,10 @@
 import SwiftUI
 
 @available(iOS 15, macOS 12, tvOS 15, watchOS 8, *)
-struct OrnamentDismissButton: ViewModifier {
+public struct OrnamentDismissButton: ViewModifier {
     @Environment(\.dismiss) private var dismiss
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
 #if os(visionOS)
             .ornament(attachmentAnchor: .scene(.bottom)) {
@@ -17,7 +17,7 @@ struct OrnamentDismissButton: ViewModifier {
 }
 
 @available(iOS 15, macOS 12, tvOS 15, watchOS 8, *)
-extension View {
+public extension View {
     func ornamentDismissButton() -> some View {
         modifier(OrnamentDismissButton())
     }
