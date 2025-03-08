@@ -12,12 +12,6 @@ public struct ListParam: View {
         self.param = param
     }
     
-    public init(_ name: String, icon: String = "", param: String = "") {
-        self.name = "\(name)"
-        self.icon = icon
-        self.param = param
-    }
-    
     public var body: some View {
 #if os(tvOS)
         Button {

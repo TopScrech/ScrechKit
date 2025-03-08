@@ -46,7 +46,9 @@ public func formatBytes<T: ConvertibleToByteCount>(
     formatter.includesUnit = withUnitName
     
     var formattedString = formatter.string(fromByteCount: byteCount)
-    formattedString = formattedString.replacingOccurrences(of: ",", with: ".") // Adjust according to locale if needed
+    
+    // Adjust according to locale if needed
+    formattedString = formattedString.replacingOccurrences(of: ",", with: ".")
     
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
     
