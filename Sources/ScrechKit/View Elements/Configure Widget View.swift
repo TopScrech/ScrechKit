@@ -7,12 +7,12 @@ public struct ConfigureWidgetView: View {
     
     private let title: LocalizedStringKey
     private let image: Image
-    private let lastStepItem: LocalizedStringKey
+    private let lastStep: LocalizedStringKey
     
-    public init(_ title: LocalizedStringKey, image: Image, lastStepItem: LocalizedStringKey) {
+    public init(_ title: LocalizedStringKey, image: Image, lastStep: LocalizedStringKey) {
         self.title = title
         self.image = image
-        self.lastStepItem = lastStepItem
+        self.lastStep = lastStep
     }
     
     private var scale: CGFloat {
@@ -42,7 +42,7 @@ public struct ConfigureWidgetView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("1. **Long press** the widget")
                 Text("2. Tap on **Edit Widget**")
-                Text("3. **Choose a \(lastStepItem)** from the list")
+                Text(lastStep)
             }
             .fontSize(10)
         }
@@ -53,6 +53,6 @@ public struct ConfigureWidgetView: View {
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 9, *)
 #Preview {
-    ConfigureWidgetView("Preview", image: Image(systemName: "hammer"), lastStepItem: "server")
+    ConfigureWidgetView("Preview", image: Image(systemName: "hammer"), lastStep: "**Choose a server** from the list")
 }
 #endif
