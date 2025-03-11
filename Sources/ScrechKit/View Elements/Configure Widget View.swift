@@ -28,7 +28,7 @@ public struct ConfigureWidgetView: View {
     public var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Label {
-                Text("MC Stats")
+                Text(title)
                     .bold()
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
@@ -48,6 +48,7 @@ public struct ConfigureWidgetView: View {
         }
         .padding()
         .scaleEffect(scale)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
