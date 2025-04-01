@@ -1,7 +1,7 @@
 import Foundation
 
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
-public func timeSinceISO(_ date: String) -> LocalizedStringResource {
+public func timeSinceISO(_ date: String) -> LocalizedStringKey {
     let formatter = ISO8601DateFormatter()
     
     guard let date = formatter.date(from: date) else {
