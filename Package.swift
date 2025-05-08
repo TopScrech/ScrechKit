@@ -6,6 +6,7 @@ let package = Package(
     products: [
         .library(
             name: "ScrechKit",
+            type: .dynamic,
             targets: ["ScrechKit"]
         )
     ],
