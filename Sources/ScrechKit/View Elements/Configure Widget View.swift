@@ -1,7 +1,7 @@
 #if canImport(WidgetKit)
 import WidgetKit
 
-@available(iOS 14, macOS 11, tvOS 14, watchOS 9, *)
+@available(iOS 14, macOS 11, tvOS 14, watchOS 9, visionOS 26, *)
 public struct ConfigureWidgetView: View {
     @Environment(\.widgetFamily) private var widgetFamily
     
@@ -56,7 +56,7 @@ public struct ConfigureWidgetView: View {
     }
 }
 
-@available(iOS 14, macOS 11, tvOS 14, watchOS 9, *)
+@available(iOS 14, macOS 11, tvOS 14, watchOS 9, visionOS 26, *)
 #Preview {
     ConfigureWidgetView("Preview", image: Image(systemName: "hammer"), lastStep: "**Choose a server** from the list")
 }
