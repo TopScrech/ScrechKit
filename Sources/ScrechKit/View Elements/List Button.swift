@@ -29,7 +29,6 @@ public struct ListButton: View {
         }
     }
     
-    @ViewBuilder
     private var buttonLabel: some View {
         HStack {
             if !icon.isEmpty {
@@ -50,7 +49,7 @@ public struct ListButton: View {
             if !actionIcon.isEmpty {
                 Image(systemName: actionIcon)
                 //                    .title3(.semibold)
-                    .foregroundColor(.secondary)
+                    .secondary()
             }
         }
         .foregroundColor(.primary)
