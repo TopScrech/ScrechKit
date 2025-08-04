@@ -10,6 +10,7 @@ public extension View {
         id: T,
         position: SKOverlay.Position = .bottom
     ) -> some View {
+        
         self.appStoreOverlay(isPresented: isPresented) {
             SKOverlay.AppConfiguration(
                 appIdentifier: id.description,
