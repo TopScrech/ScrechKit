@@ -8,4 +8,14 @@ public final class Pasteboard {
         UIPasteboard.general.string = string
 #endif
     }
+    
+    public static func copy(_ url: URL?) {
+#if os(macOS)
+        if let url {
+            NSPasteboard.general.writeObjects([url as NSURL])
+        }
+#else
+        UIPasteboard.general.url = url
+#endif
+    }
 }
