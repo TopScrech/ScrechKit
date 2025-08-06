@@ -1,3 +1,4 @@
+#if !os(watchOS) && !os(tvOS)
 import Foundation
 
 public final class Pasteboard {
@@ -19,3 +20,4 @@ public final class Pasteboard {
 #endif
     }
 }
+#endif
