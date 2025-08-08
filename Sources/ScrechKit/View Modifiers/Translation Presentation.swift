@@ -15,7 +15,9 @@ public struct TranslationPresentation: ViewModifier {
     public func body(content: Content) -> some View {
         if #available(iOS 17.4, macOS 14.4, *) {
             content
+#if !targetEnvironment(macCatalyst)
                 .translationPresentation(isPresented: $isPresented, text: text)
+#endif
         } else {
             content
         }
