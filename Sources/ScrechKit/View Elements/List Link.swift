@@ -30,11 +30,9 @@ public struct ListLink <Destination: View>: View {
 }
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
-struct ListLink_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            ListLink()
-            ListLink(icon: "hammer")
-        }
+#Preview {
+    List {
+        ListLink()
+        ListLink(icon: "hammer")
     }
 }

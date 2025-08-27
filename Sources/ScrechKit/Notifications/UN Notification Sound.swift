@@ -1,5 +1,4 @@
 #if os(macOS)
-
 import UserNotifications
 
 #if os(iOS)
@@ -23,5 +22,4 @@ public extension UNNotificationSound {
         .criticalSoundNamed(.init(name), withAudioVolume: volume)
     }
 }
-
 #endif

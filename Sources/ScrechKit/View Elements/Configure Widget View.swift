@@ -21,11 +21,8 @@ public struct ConfigureWidgetView: View {
     
     private var scale: CGFloat {
         switch widgetFamily {
-        case .systemMedium:
-            1.25
-            
-        default:
-            1
+        case .systemMedium: 1.25
+        default: 1
         }
     }
     

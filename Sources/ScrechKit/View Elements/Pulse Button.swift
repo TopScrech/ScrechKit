@@ -7,7 +7,10 @@ public struct PulseCircle: View {
     
     @State private var shouldPulse = false
     
-    public init(_ color: Color = .blue, size: CGFloat = 12) {
+    public init(
+        _ color: Color = .blue,
+        size: CGFloat = 12
+    ) {
         self.color = color
         self.size = size
     }
@@ -16,9 +19,12 @@ public struct PulseCircle: View {
         SwiftUI.Circle()
             .fill(color)
             .frame(width: size, height: size)
-            .scaleEffect(shouldPulse ? 1.2 : 1.0)
-            .opacity(shouldPulse ? 0.6 : 1.0)
-            .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: shouldPulse)
+            .scaleEffect(shouldPulse ? 1.2 : 1)
+            .opacity(shouldPulse ? 0.6 : 1)
+            .animation(
+                .easeInOut(duration: 1).repeatForever(autoreverses: true),
+                value: shouldPulse
+            )
             .onAppear {
                 shouldPulse.toggle()
             }
@@ -26,9 +32,7 @@ public struct PulseCircle: View {
 }
 
 @available(iOS 13, macOS 11, tvOS 13, watchOS 6, *)
-struct PulseCircle_Previews: PreviewProvider {
-    static var previews: some View {
-        PulseCircle()
-            .darkSchemePreferred()
-    }
+#Preview {
+    PulseCircle()
+        .darkSchemePreferred()
 }

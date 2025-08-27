@@ -20,5 +20,4 @@ public func openInFinderOrCreate(_ folderPath: String) {
     // Open
     NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: folderPath)
 }
-
 #endif

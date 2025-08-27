@@ -58,10 +58,8 @@ public struct ListButton: View {
 }
 
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
-struct ListButton_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            ListButton("Preview", icon: "hammer", actionIcon: "camera")
-        }
+#Preview {
+    List {
+        ListButton("Preview", icon: "hammer", actionIcon: "camera")
     }
 }
