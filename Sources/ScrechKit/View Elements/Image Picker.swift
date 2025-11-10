@@ -1,5 +1,4 @@
 #if os(iOS)
-
 import SwiftUI
 import PhotosUI
 
@@ -57,5 +56,4 @@ public struct ImagePicker: UIViewControllerRepresentable {
         }
     }
 }
-
 #endif

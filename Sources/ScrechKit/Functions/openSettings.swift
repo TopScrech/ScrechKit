@@ -2,6 +2,7 @@
 
 import Foundation
 
+@MainActor
 public func openSettings(
     _ onCompletion: @escaping () -> Void = {},
     onFailure: @escaping () -> Void = {}

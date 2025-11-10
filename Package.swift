@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.2.1
 import PackageDescription
 
 let package = Package(
@@ -10,10 +10,7 @@ let package = Package(
         )
     ],
     targets: [
-        .target(
-            name: "ScrechKit",
-            dependencies: []
-        ),
+        .target(name: "ScrechKit"),
         .testTarget(
             name: "Tests",
             dependencies: ["ScrechKit"]
