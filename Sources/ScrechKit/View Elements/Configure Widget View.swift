@@ -36,7 +36,7 @@ public struct ConfigureWidgetView: View {
             } icon: {
                 image
                     .resizable()
-                    .frame(width: 32, height: 32)
+                    .frame(32)
                     .clipShape(.rect(cornerRadius: 8))
             }
             

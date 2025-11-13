@@ -18,7 +18,7 @@ public struct PulseCircle: View {
     public var body: some View {
         SwiftUI.Circle()
             .fill(color)
-            .frame(width: size, height: size)
+            .frame(size)
             .scaleEffect(shouldPulse ? 1.2 : 1)
             .opacity(shouldPulse ? 0.6 : 1)
             .animation(

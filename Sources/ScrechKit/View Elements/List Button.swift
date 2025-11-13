@@ -35,7 +35,7 @@ public struct ListButton: View {
                 Image(systemName: icon)
                     .title2()
                     .foregroundColor(.white)
-                    .frame(width: 32, height: 32)
+                    .frame(32)
                     .background {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(color)
