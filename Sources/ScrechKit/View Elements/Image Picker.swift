@@ -8,7 +8,6 @@ public extension View {
         self.sheet(isPresented) {
             ImagePicker(image)
                 .ignoresSafeArea()
-            
         }
     }
 }

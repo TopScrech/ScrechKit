@@ -32,6 +32,7 @@ public extension View {
 }
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
+@MainActor
 public extension View {
     func title2() -> some View {
         self.font(.title2)
