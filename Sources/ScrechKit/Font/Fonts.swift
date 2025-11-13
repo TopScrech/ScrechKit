@@ -32,7 +32,7 @@ public extension View {
 }
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
-public nonisolated extension View {
+public extension View {
     func title2() -> some View {
         self.font(.title2)
     }
@@ -47,7 +47,7 @@ public nonisolated extension View {
 }
 
 @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
-public extension View {
+public nonisolated extension View {
     func largeTitle(_ weight: Font.Weight = .regular, design: Font.Design = .default) -> some View {
         self
             .font(.system(.largeTitle, design: design, weight: weight))
