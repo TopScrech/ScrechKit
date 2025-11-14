@@ -10,6 +10,12 @@ extension Int: ConvertibleToByteCount {
     }
 }
 
+extension UInt: ConvertibleToByteCount {
+    public func toByteCount() -> Int64 {
+        Int64(self)
+    }
+}
+
 extension UInt64: ConvertibleToByteCount {
     public func toByteCount() -> Int64 {
         Int64(self)
