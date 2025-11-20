@@ -5,9 +5,14 @@ public extension View {
     func numericTransition() -> some View {
         self.contentTransition(.numericText())
     }
+        
+    @available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
+    func numericTransition<N: BinaryInteger>(_ value: N) -> some View {
+        self.contentTransition(.numericText(value: Double(value)))
+    }
     
     @available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
-    func numericTransition(_ value: Int) -> some View {
+    func numericTransition<N: BinaryFloatingPoint>(_ value: N) -> some View {
         self.contentTransition(.numericText(value: Double(value)))
     }
 }
