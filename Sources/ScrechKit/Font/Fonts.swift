@@ -1,7 +1,7 @@
 import SwiftUI
 
 @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
-public extension View {
+public nonisolated extension View {
     func largeTitle() -> some View {
         self.font(.largeTitle)
     }
@@ -32,7 +32,7 @@ public extension View {
 }
 
 @available(iOS 14, macOS 11, tvOS 14, watchOS 7, *)
-public extension View {
+public nonisolated extension View {
     func title2() -> some View {
         self.font(.title2)
     }
