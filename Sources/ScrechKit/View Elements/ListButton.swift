@@ -7,7 +7,7 @@ public struct ListButton: View {
     private let color: Color
     private let action: () -> Void
     
-    public init (
+    public init(
         _ name: LocalizedStringKey,
         icon: String = "",
         actionIcon: String = "",
