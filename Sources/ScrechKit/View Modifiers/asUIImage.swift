@@ -1,5 +1,4 @@
 #if os(iOS) && os(tvOS)
-
 import SwiftUI
 
 @available(iOS 13, tvOS 13, *)
@@ -35,5 +34,4 @@ public extension View {
         }
     }
 }
-
 #endif

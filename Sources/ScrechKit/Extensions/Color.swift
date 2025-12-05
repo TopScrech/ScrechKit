@@ -1,13 +1,9 @@
 import SwiftUI
 
 #if canImport(UIKit)
-
 typealias PlatformColor = UIColor
-
 #elseif canImport(AppKit)
-
 typealias PlatformColor = NSColor
-
 #endif
 
 @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)

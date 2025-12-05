@@ -3,10 +3,13 @@ import Foundation
 public func prettyJSON(_ input: Any?) -> String? {
     do {
         let jsonData: Data
+        
         if let string = input as? String, let data = string.data(using: .utf8) {
             jsonData = data
+            
         } else if let data = input as? Data {
             jsonData = data
+            
         } else {
             return nil
         }

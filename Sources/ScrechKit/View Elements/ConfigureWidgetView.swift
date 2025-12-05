@@ -9,11 +9,7 @@ public struct ConfigureWidgetView: View {
     private let image: Image
     private let lastStep: LocalizedStringKey
     
-    public init(
-        _ title: LocalizedStringKey,
-        image: Image,
-        lastStep: LocalizedStringKey
-    ) {
+    public init(_ title: LocalizedStringKey, image: Image, lastStep: LocalizedStringKey) {
         self.title = title
         self.image = image
         self.lastStep = lastStep

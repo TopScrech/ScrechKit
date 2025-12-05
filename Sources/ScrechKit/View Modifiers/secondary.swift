@@ -5,11 +5,9 @@ public extension View {
     @ViewBuilder
     func secondary() -> some View {
         if #available(iOS 15, watchOS 8, macOS 12, tvOS 15, *) {
-            self
-                .foregroundStyle(.secondary)
+            self.foregroundStyle(.secondary)
         } else {
-            self
-                .foregroundColor(.secondary)
+            self.foregroundColor(.secondary)
         }
     }
 }

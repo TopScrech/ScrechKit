@@ -7,10 +7,7 @@ public struct PulseCircle: View {
     
     @State private var shouldPulse = false
     
-    public init(
-        _ color: Color = .blue,
-        size: CGFloat = 12
-    ) {
+    public init(_ color: Color = .blue, size: CGFloat = 12) {
         self.color = color
         self.size = size
     }

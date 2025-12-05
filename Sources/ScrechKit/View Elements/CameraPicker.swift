@@ -1,5 +1,4 @@
 #if os(iOS)
-
 import SwiftUI
 
 @available(iOS 14, *)
@@ -53,5 +52,4 @@ public struct CameraPicker: UIViewControllerRepresentable {
         }
     }
 }
-
 #endif

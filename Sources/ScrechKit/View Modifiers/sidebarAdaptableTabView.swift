@@ -6,8 +6,7 @@ public extension View {
     @ViewBuilder
     func sidebarAdaptableTabView() -> some View {
         if #available(iOS 18, macOS 15, tvOS 18, visionOS 2, *) {
-            self
-                .tabViewStyle(.sidebarAdaptable)
+            self.tabViewStyle(.sidebarAdaptable)
         } else {
             self
         }

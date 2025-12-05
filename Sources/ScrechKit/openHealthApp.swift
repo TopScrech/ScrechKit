@@ -11,5 +11,4 @@ public func openHealthApp() {
         }
     }
 }
-
 #endif

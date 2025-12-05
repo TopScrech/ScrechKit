@@ -6,11 +6,7 @@ public struct ListLink <Destination: View>: View {
     private let icon: String?
     private let destination: Destination
     
-    public init (
-        _ name: String = "Unknown",
-        icon: String? = nil,
-        @ViewBuilder destination: () -> Destination = { EmptyView() }
-    ) {
+    public init(_ name: String = "Unknown", icon: String? = nil, @ViewBuilder destination: () -> Destination = { EmptyView() }) {
         self.name = name
         self.icon = icon
         self.destination = destination()
