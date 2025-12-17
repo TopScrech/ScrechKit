@@ -1,6 +1,9 @@
 import GameKit
 
 public func grantAchievement(_ id: String, percentComplete: Double = 100) {
+#if DEBUG
+    print(id, "achievement can't be granted in debug")
+#else
     let achievement = GKAchievement(identifier: id)
     achievement.percentComplete = percentComplete
     achievement.showsCompletionBanner = true
@@ -12,4 +15,5 @@ public func grantAchievement(_ id: String, percentComplete: Double = 100) {
             print("Achievement granted:", id)
         }
     }
+#endif
 }
