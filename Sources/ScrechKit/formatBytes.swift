@@ -35,6 +35,15 @@ extension Int64: ConvertibleToByteCount {
 }
 
 @available(iOS 6, macOS 10.8, tvOS 9, watchOS 2, *)
+public func formatMegaBytes<T: ConvertibleToByteCount>(_ megaBytes: T, countStyle: ByteCountFormatter.CountStyle = .file, withUnitName: Bool = true) -> String {
+    let mb = megaBytes.toByteCount()
+    let multiplier = Int64(1024) * Int64(1024)
+    let (bytes, overflow) = mb.multipliedReportingOverflow(by: multiplier)
+    
+    return formatBytes(overflow ? (mb >= 0 ? .max : .min) : bytes, countStyle: countStyle, withUnitName: withUnitName)
+}
+
+@available(iOS 6, macOS 10.8, tvOS 9, watchOS 2, *)
 public func formatBytes<T: ConvertibleToByteCount>(_ bytes: T, countStyle: ByteCountFormatter.CountStyle = .file, withUnitName: Bool = true) -> String {
     let byteCount = bytes.toByteCount()
     
