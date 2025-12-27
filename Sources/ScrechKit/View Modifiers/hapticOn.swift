@@ -1,8 +1,8 @@
 import SwiftUI
 
 @available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
-struct HapticOnModifier: ViewModifier {
-    @Binding var trigger: Bool
+struct HapticOnModifier<Trigger: Equatable>: ViewModifier {
+    let trigger: Trigger
     let sensoryFeedback: SensoryFeedback
     let disabled: Bool
     
@@ -18,7 +18,7 @@ struct HapticOnModifier: ViewModifier {
 
 @available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
 public extension View {
-    func hapticOn(_ trigger: Binding<Bool>, as sensoryFeedback: SensoryFeedback, disabled: Bool = false) -> some View {
+    func hapticOn<Trigger: Equatable>(_ trigger: Trigger, as sensoryFeedback: SensoryFeedback, disabled: Bool = false) -> some View {
         modifier(HapticOnModifier(trigger: trigger, sensoryFeedback: sensoryFeedback, disabled: disabled))
     }
 }
