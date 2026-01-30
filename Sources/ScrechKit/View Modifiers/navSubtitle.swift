@@ -4,7 +4,7 @@ import SwiftUI
 public extension View {
     @ViewBuilder
     func navSubtitle(_ subtitle: LocalizedStringKey) -> some View {
-#if os(visionOS) || os(tvOS)
+#if os(visionOS) || os(tvOS) || os(watchOS)
         self
 #else
         if #available(iOS 26, macOS 11, *) {
