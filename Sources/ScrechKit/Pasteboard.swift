@@ -4,7 +4,9 @@ import Foundation
 public final class Pasteboard {
     public static func copy(_ string: String) {
 #if os(macOS)
-        NSPasteboard.general.setString(string, forType: .string)
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(string, forType: .string)
 #else
         UIPasteboard.general.string = string
 #endif
