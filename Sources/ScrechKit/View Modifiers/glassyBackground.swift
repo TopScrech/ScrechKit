@@ -1,5 +1,5 @@
 @available(iOS 15, macOS 12, tvOS 15, watchOS 10, *)
-extension View {
+public extension View {
     @ViewBuilder
     func glassyBackground(_ rectRounding: CGFloat? = nil) -> some View {
 #if os(visionOS)
