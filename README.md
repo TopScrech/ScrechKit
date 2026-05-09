@@ -21,55 +21,67 @@ Runs an action once for the view lifecycle
 
 ```swift
 Text("Welcome")
-    .onFirstAppear { loadInitialState() }
+    .onFirstAppear {
+        loadInitialState()
+    }
 ```
 
 ### `hapticOn`
 Triggers sensory feedback when a value changes
 
 ```swift
-Button("Save") { saveCount += 1 }
-    .hapticOn(saveCount, as: .success)
+Button("Save") {
+    saveCount += 1
+}
+.hapticOn(saveCount, as: .success)
 ```
 
 ### `sheet`
 Short binding-first sheet helper
 
 ```swift
-Button("Show") { showSheet = true }
-    .sheet($showSheet) {
-        Text("Sheet Content")
-    }
+Button("Show") {
+    showSheet = true
+}
+.sheet($showSheet) {
+    Text("Sheet Content")
+}
 ```
 
 ### `popover`
 Short binding-first popover helper
 
 ```swift
-Button("Info") { showPopover = true }
-    .popover($showPopover) {
-        Text("Popover Content")
-    }
+Button("Info") {
+    showPopover = true
+}
+.popover($showPopover) {
+    Text("Popover Content")
+}
 ```
 
 ### `fullScreenCover`
 Short binding-first full-screen cover helper
 
 ```swift
-Button("Open") { showFullScreen = true }
-    .fullScreenCover($showFullScreen) {
-        Text("Full Screen")
-    }
+Button("Open") {
+    showFullScreen = true
+}
+.fullScreenCover($showFullScreen) {
+    Text("Full Screen")
+}
 ```
 
 ### `refreshableTask`
 Uses one async action for initial load and pull to refresh
 
 ```swift
-List(items, id: \.self) { Text($0) }
-    .refreshableTask {
-        await reload()
-    }
+List(items, id: \.self) {
+    Text($0)
+}
+.refreshableTask {
+    await reload()
+}
 ```
 
 ### `secondary` and `tertiary`
@@ -77,8 +89,11 @@ Applies secondary or tertiary foreground styling
 
 ```swift
 VStack {
-    Text("Secondary").secondary()
-    Text("Tertiary").tertiary()
+    Text("Secondary")
+        .secondary()
+    
+    Text("Tertiary")
+        .tertiary()
 }
 ```
 
@@ -120,16 +135,20 @@ PulseCircle(.green, size: 10)
 Presents the photo library and returns a selected image
 
 ```swift
-Button("Pick Image") { showImagePicker = true }
-    .imagePicker($showImagePicker, image: $selectedImage)
+Button("Pick Image") {
+    showImagePicker = true
+}
+.imagePicker($showImagePicker, image: $selectedImage)
 ```
 
 ### `cameraPicker`
 Presents the camera and returns the captured image
 
 ```swift
-Button("Take Photo") { showCamera = true }
-    .cameraPicker($showCamera, image: $capturedImage)
+Button("Take Photo") {
+    showCamera = true
+}
+.cameraPicker($showCamera, image: $capturedImage)
 ```
 
 ### `formatBytes` and `formatMegaBytes`
@@ -219,8 +238,3 @@ Opens Apple Health on iOS
 ```swift
 openHealthApp()
 ```
-
-## Notes
-
-- Availability varies by API so check each `@available` annotation
-- DocC stubs live in `ScrechKit.docc`
