@@ -10,11 +10,12 @@ Add this package with Swift Package Manager in Xcode with File > Add Packages...
 .package(url: "https://github.com/topscrech/ScrechKit", branch: "main")
 ```
 
+## Usage
+
 Importing ScrechKit also imports SwiftUI
 
 ```swift
 import ScrechKit
 ```
 
-## Usage
 See all available view modifiers, methods, and examples in the [wiki](https://github.com/TopScrech/ScrechKit/wiki)
