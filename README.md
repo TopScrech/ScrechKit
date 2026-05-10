@@ -15,3 +15,6 @@ Importing ScrechKit also exports SwiftUI
 ```swift
 import ScrechKit
 ```
+
+## Usage
+See all available view modifiers, methods, and examples in the [wiki](https://github.com/TopScrech/ScrechKit/wiki)
