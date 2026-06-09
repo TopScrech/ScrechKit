@@ -2,6 +2,13 @@
 
 ScrechKit is a set of SwiftUI modifiers, components, and small platform helpers used across Screch apps
 
+## Supported platforms
+- iOS / iPadOS 13+
+- macOS 10.15+
+- tvOS 13+
+- watchOS 9+
+- visionOS 1+
+
 ## Installation
 
 Add this package with Swift Package Manager in Xcode with File > Add Packages... or via `Package.swift`
