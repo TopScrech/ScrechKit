@@ -1,4 +1,3 @@
-#if os(macOS)
 import UserNotifications
 
 #if os(iOS)
@@ -11,7 +10,9 @@ public extension UNNotificationSound {
 }
 
 #endif
-    
+
+#if os(macOS)
+
 @available(iOS 12, macOS 10.14, *)
 public extension UNNotificationSound {
     static func critical(_ name: String) -> UNNotificationSound {
@@ -22,4 +23,5 @@ public extension UNNotificationSound {
         .criticalSoundNamed(.init(name), withAudioVolume: volume)
     }
 }
+
 #endif
