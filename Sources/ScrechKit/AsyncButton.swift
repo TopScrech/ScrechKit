@@ -2,7 +2,7 @@ import SwiftUI
 
 @available(iOS 17, macOS 14, tvOS 17, watchOS 10, *)
 /// A button that performs an async task when tapped
-struct AsyncButton<Label: View, Trigger: Equatable>: View {
+public struct AsyncButton<Label: View, Trigger: Equatable>: View {
     /// The cancellation trigger
     var cancellation: Trigger?
     
@@ -30,7 +30,7 @@ struct AsyncButton<Label: View, Trigger: Equatable>: View {
         self.label = label
     }
     
-    var body: some View {
+    public var body: some View {
         Button {
             isPerformingTask = true
             
