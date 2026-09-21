@@ -63,7 +63,7 @@ public func formatBytes<T: ConvertibleToByteCount>(_ bytes: T, countStyle: ByteC
     
     var split = formattedString.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
     
-    if let firstComponent = split.first, let number = Double(firstComponent.replacingOccurrences(of: ",", with: ".")) {
+    if let firstComponent = split.first, let number = Double(firstComponent) {
         let roundedNumber = number.roundedToSingleDecimalOrInt()
         
         split[0] = Substring(String(format: roundedNumber.truncatingRemainder(dividingBy: 1) == 0 ? "%.0f" : "%.1f", roundedNumber))
