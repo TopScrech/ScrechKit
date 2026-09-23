@@ -50,3 +50,19 @@ public extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
         }
     }
 }
+
+#Preview {
+    AsyncButton("Preview") {}
+    AsyncButton("Preview", systemImage: "hammer") {}
+    AsyncButton("Preview", systemImage: "hammer", role: .destructive) {}
+    
+    AsyncButton(action: {}) {
+        Text("Preview")
+    }
+    
+    AsyncButton("Preview", systemImage: "hammer") {}
+        .labelStyle(.iconOnly)
+    
+    AsyncButton("Preview", systemImage: "hammer") {}
+        .labelStyle(.titleOnly)
+}
