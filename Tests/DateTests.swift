@@ -9,17 +9,18 @@ struct DateTests {
         #expect(result == "May 12, 2004")
     }
     
-    @Test func testFormatISODate() {
-        let calendar = Calendar.current
+    @Test func testFormatISODate() throws {
+        let calendar = Calendar(identifier: .gregorian)
         
-        let date = calendar.date(from: DateComponents(
+        let date = try #require(calendar.date(from: DateComponents(
             year: 2004,
             month: 5,
             day: 12
-        ))
+        )))
         
-        let result = formatISO(date!)
+        let result = formatISO(date)
+        let expected = date.formatted(date: .abbreviated, time: .omitted)
         
-        #expect(result == "May 12, 2004")
+        #expect(result == expected)
     }
 }
