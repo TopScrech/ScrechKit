@@ -30,6 +30,7 @@ public extension AsyncButton where Label == Text {
         }
     }
     
+    @_disfavoredOverload
     init<S: StringProtocol>(_ title: S, role: ButtonRole? = nil, action: @escaping @MainActor () async -> Void) {
         self.init(role: role, action: action) {
             Text(title)
@@ -44,6 +45,7 @@ public extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
         }
     }
     
+    @_disfavoredOverload
     init<S: StringProtocol>(_ title: S, systemImage: String, role: ButtonRole? = nil, action: @escaping @MainActor () async -> Void) {
         self.init(role: role, action: action) {
             SwiftUI.Label(title, systemImage: systemImage)
