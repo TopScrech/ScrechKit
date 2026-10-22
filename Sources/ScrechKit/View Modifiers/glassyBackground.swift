@@ -1,32 +1,49 @@
+import SwiftUI
+
 @available(iOS 15, macOS 12, tvOS 15, watchOS 10, *)
 public extension View {
     @ViewBuilder
-    func glassyBackground(_ rectRounding: CGFloat? = nil) -> some View {
-#if os(visionOS)
+    func glassyBackground(
+        _ rectRounding: CGFloat? = nil,
+        tint: Color? = nil,
+        interactive: Bool = false
+    ) -> some View {
         if let rectRounding {
-            self
-                .background(.ultraThinMaterial, in: .rect(cornerRadius: rectRounding))
+            glassyBackground(in: .rect(cornerRadius: rectRounding), tint: tint, interactive: interactive)
         } else {
-            self
-                .background(.ultraThinMaterial)
+            glassyBackground(in: .capsule, tint: tint, interactive: interactive)
         }
+    }
+
+    /// Uses tinted material on older systems and visionOS, without glass interaction
+    @ViewBuilder
+    func glassyBackground<S: Shape>(
+        in shape: S,
+        tint: Color? = nil,
+        interactive: Bool = false
+    ) -> some View {
+#if os(visionOS)
+        self
+            .background {
+                shape
+                    .fill(.ultraThinMaterial)
+                    .overlay {
+                        shape.fill(tint ?? .clear)
+                    }
+            }
 #else
         if #available(iOS 26, macOS 26, tvOS 26, watchOS 26, *) {
-            if let rectRounding {
-                self
-                    .glassEffect(in: .rect(cornerRadius: rectRounding))
-            } else {
-                self
-                    .glassEffect()
-            }
+            self
+                .glassEffect(.regular.tint(tint).interactive(interactive), in: shape)
         } else {
-            if let rectRounding {
-                self
-                    .background(.ultraThinMaterial, in: .rect(cornerRadius: rectRounding))
-            } else {
-                self
-                    .background(.ultraThinMaterial)
-            }
+            self
+                .background {
+                    shape
+                        .fill(.ultraThinMaterial)
+                        .overlay {
+                            shape.fill(tint ?? .clear)
+                        }
+                }
         }
 #endif
     }
